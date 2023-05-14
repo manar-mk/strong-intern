@@ -1,18 +1,50 @@
-#root {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.container {
   max-width: 1440px;
   margin: 0 auto;
 }
-
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 button {
   font: inherit;
 }
 
 p {
   font-size: 0.875rem;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
