@@ -35,7 +35,7 @@
   gap: 40px;
 }
 .navbar__item {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -57,6 +57,12 @@
 }
 .input__search::placeholder {
   width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #a2b3cd;
 }
 .user__menu {
   display: flex;
