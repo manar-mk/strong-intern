@@ -1,12 +1,61 @@
+.card {
+  width: 168px;
+}
+
 .card__details {
   display: flex;
   justify-content: space-between;
 }
-.card__name {
+
+.card__image {
+  margin-bottom: 10px;
+  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.36));
+  border-radius: 7px;
+}
+
+.card__title {
+  margin-bottom: 4px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
+}
+
+.card__year {
+  margin-bottom: 5px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  color: #afafaf;
+}
+
+.card__rating {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ffc907;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  gap: 76px;
+}
+
+.details__left {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.details__right {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
 }
