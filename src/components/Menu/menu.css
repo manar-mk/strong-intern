@@ -1,0 +1,16 @@
+.menu{
+    position: absolute;
+    width: 117px;
+    height: 315px;
+    left: -32px;
+    top: 125px;
+    background: linear-gradient(2.87deg, #130B29 9.89%, #5436A9 100%, #5E47A1 100%);
+    border-radius: 26px;
+    z-index: 10;
+}
+
+.menu img{
+    width: 30px;
+    margin: 38px 0 0 58px;
+
+}

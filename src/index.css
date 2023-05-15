@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Griffy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('./components/Header/header.css');
+@import url('./components/reset.css');
+@import url('./components/Menu/menu.css');
+@import url('./components/MovieSection/movieSection.css');
+@import url('./components/Footer/footer.css');
+@import url('./components/Card/card.css');
+@import url('./components/MovieInfo/movieInfo.css');
