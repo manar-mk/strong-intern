@@ -51,11 +51,18 @@
 .details__left {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 6px;
 }
 
 .details__right {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 6px;
+}
+
+.image__imbd {
+  width: 28px;
+  height: 14px;
 }

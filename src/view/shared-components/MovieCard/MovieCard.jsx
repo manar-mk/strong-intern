@@ -16,7 +16,7 @@ const MovieCard = () => {
       <div className={s.card__details}>
         <div className={s.details__left}>
           <div className={s.card__imbd}>
-            <img src={imbdIcon} alt="imbd" />
+            <img className={s.image__imbd} src={imbdIcon} alt="imbd" />
           </div>
           <div className={s.card__rating}>8.6</div>
         </div>
