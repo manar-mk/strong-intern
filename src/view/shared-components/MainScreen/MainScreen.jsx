@@ -4,9 +4,11 @@ import tamasha from '../../../assets/watch/tamasha.png';
 import watch from '../../../assets/watch/watch.svg';
 import plus from '../../../assets/watch/plus.svg';
 import imbd from '../../../assets/movie-card/imdb.png';
+import SideBar from '../SideBar/SideBar';
 const MainScreen = () => {
   return (
     <div className={s.main}>
+      <SideBar />
       <div className={s.main__content}>
         <img className={s.main__img} src={tamasha} alt="" />
         <div className={s.main__text}>

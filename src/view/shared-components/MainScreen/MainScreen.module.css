@@ -1,6 +1,6 @@
-.main__content {
-  
- 
+.main {
+  position: relative;
+  padding-left: 123px;
 }
 .main__text {
   font-family: 'Montserrat';
@@ -77,7 +77,7 @@
 .watch__details {
   display: flex;
   gap: 18px;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
 }
 .watch__country {
   border: 1px solid #ffffff;
