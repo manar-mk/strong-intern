@@ -1,0 +1,66 @@
+.card{
+    width: 200px;
+    height: 320px;
+    padding: 1%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.card>img{
+    width: 168px;
+    height: 237px;
+    border-radius: 7px;
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.36));
+}
+.card h4{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    width: 168px;
+    margin: 3% 0;
+}
+
+.card span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    color: #AFAFAF;
+    margin: 3% 0;
+}
+
+.card-info{
+    display: flex;
+    align-items: center;
+}
+
+.card-info-rating{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 65px;
+}
+.card-info-rating img{
+    width: 28px;
+    margin-right: 5px;
+}
+
+.card-info-rating span{
+    color: #FFC907;
+}
+
+.card-info-action{
+    display: flex;
+width: 50%;
+}
+
+.card-info-action img{
+    width: 17px;
+    margin-right: 5px;
+}
+
