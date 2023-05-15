@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <div className={s.footer}>
       <SelectLan />
+      
     </div>
   );
 };

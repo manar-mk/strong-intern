@@ -12,7 +12,9 @@
   filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.36));
   border-radius: 7px;
 }
-
+.card__img {
+  max-width: 100%;
+}
 .card__title {
   margin-bottom: 4px;
   font-family: 'Montserrat';

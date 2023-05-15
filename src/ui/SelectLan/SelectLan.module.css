@@ -1,3 +1,18 @@
 .select__container {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+  padding: 8px 16px;
+  background: #362f33;
+}
+.select__language {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.8;
 }
