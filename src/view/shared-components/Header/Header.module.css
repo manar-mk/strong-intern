@@ -1,14 +1,14 @@
 .header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 32px;
   background: linear-gradient(
     90.53deg,
     rgba(0, 0, 0, 0.75) 0.45%,
     rgba(102, 80, 165, 0.75) 105.51%
   );
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 17px 32px;
 }
 .header__left {
   display: flex;
@@ -40,9 +40,16 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  color: #a1b1cb;
+}
+.navbar__item:hover {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
 }
-
 .navbar__search {
   width: 324px;
   height: 37px;

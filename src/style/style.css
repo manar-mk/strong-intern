@@ -49,3 +49,13 @@ select {
   outline: none;
   background-color: transparent;
 }
+.wrapper {
+  background: linear-gradient(
+      90deg,
+      #000000 17.76%,
+      rgba(0, 0, 0, 0.687449) 41.44%,
+      rgba(196, 196, 196, 0) 100%
+    ),
+    url('../assets/watch/bg-watch.png');
+  background-size: cover;
+}
