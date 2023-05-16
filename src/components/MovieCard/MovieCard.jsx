@@ -1,9 +1,8 @@
 import React from 'react';
 import s from './MovieCard.module.css';
-import cardImage from '../../../assets/movie-card/card.png';
-import eyeIcon from '../../../assets/movie-card/eye.svg';
-import likeIcon from '../../../assets/movie-card/like.svg';
-import imbdIcon from '../../../assets/movie-card/imdb.png';
+import eyeIcon from '../../assets/movie-card/eye.svg';
+import likeIcon from '../../assets/movie-card/like.svg';
+import imbdIcon from '../../assets/movie-card/imdb.png';
 // adult: false;
 // backdrop_path: '/aAgGrfBwna1nO4M2USxwFgK5O0t.jpg';
 // genre_ids: (3)[(27, 53, 14)];

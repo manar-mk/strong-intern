@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './CardHaeding.module.css';
-import filterIcon from '../../../../assets/movie-card/filter-icon.svg';
+import filterIcon from '../../../assets/movie-card/filter-icon.svg';
 const CardHeading = ({ children, hasFilterButton = true }) => {
   return (
     <div className={s.card__header}>

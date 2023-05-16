@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './MainScreen.module.css';
-import tamasha from '../../../assets/watch/tamasha.png';
-import watch from '../../../assets/watch/watch.svg';
-import plus from '../../../assets/watch/plus.svg';
-import imbd from '../../../assets/movie-card/imdb.png';
+import tamasha from '../../assets/watch/tamasha.png';
+import watch from '../../assets/watch/watch.svg';
+import plus from '../../assets/watch/plus.svg';
+import imbd from '../../assets/movie-card/imdb.png';
 import SideBar from '../SideBar/SideBar';
 const MainScreen = () => {
   return (

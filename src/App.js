@@ -1,22 +1,27 @@
-import Footer from './view/shared-components/Footer/Footer';
-import Header from './view/shared-components/Header/Header';
-import MainScreen from './view/shared-components/MainScreen/MainScreen';
-import MovieList from './view/shared-components/MovieList/MovieList';
-import RecommendedList from './view/shared-components/RecommendedList/RecommendedList';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import Main from './pages/main';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+const queryClient = new QueryClient();
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: Main,
+    children: [
+      {
+        path: 'movie/:movieId',
+        Component: Main,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <div className="wrapper">
-        <div className="content">
-          <Header />
-          <MainScreen />
-          <MovieList />
-        </div>
-          <RecommendedList />
-        <Footer />
-      </div>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   );
 }
 

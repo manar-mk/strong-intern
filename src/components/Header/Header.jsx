@@ -1,10 +1,10 @@
 import React from 'react';
 import s from './Header.module.css';
-import logo from '../../../assets/header/DRAMATIC.png';
-import search from '../../../assets/header/search.svg';
-import gift from '../../../assets/header/gift.svg';
-import bell from '../../../assets/header/bell.svg';
-import Ellipse from '../../../assets/header/Ellipse.svg';
+import logo from '../../assets/header/DRAMATIC.png';
+import search from '../../assets/header/search.svg';
+import gift from '../../assets/header/gift.svg';
+import bell from '../../assets/header/bell.svg';
+import Ellipse from '../../assets/header/Ellipse.svg';
 const Header = () => {
   return (
     <header className={s.header}>

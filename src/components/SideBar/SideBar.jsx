@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './SideBar.module.css';
-import users from '../../../assets/sidebar/users.svg';
-import list from '../../../assets/sidebar/list.svg';
-import download from '../../../assets/sidebar/download.svg';
-import settings from '../../../assets/sidebar/settings.svg';
+import users from '../../assets/sidebar/users.svg';
+import list from '../../assets/sidebar/list.svg';
+import download from '../../assets/sidebar/download.svg';
+import settings from '../../assets/sidebar/settings.svg';
 const SideBar = () => {
   return (
     <div className={s.sidebar}>
