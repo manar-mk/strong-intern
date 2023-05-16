@@ -23,3 +23,8 @@
 
 #### Demo Link
 * https://www.youtube.com/watch?v=Z5hMFh83FPI
+
+---
+
+#### Original GitHub source code to see all commits
+* https://github.com/maksat-mad/angular-movies.git
