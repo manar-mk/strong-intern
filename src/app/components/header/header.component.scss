@@ -1,0 +1,91 @@
+header {
+  background: linear-gradient(90.53deg, rgba(0, 0, 0, 0.75) 0.45%, rgba(102, 80, 165, 0.75) 105.51%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.header-content {
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 26px;
+  padding-right: 32px;
+}
+
+.logo-links-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 51px;
+}
+
+.active-link-div {
+  position: relative;
+}
+
+.active-link {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.blue-circle {
+  width: 10px;
+  height: 10px;
+  background: #38BBD8;
+  border-radius: 30px;
+  position: absolute;
+  top: 3vh;
+}
+
+.link {
+  text-decoration: none;
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #A1B1CB;
+}
+
+.search-links-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 51px;
+}
+
+.search {
+  width: 324px;
+  height: 37px;
+  background: #3B567D;
+  border-radius: 18.5px;
+  gap: 1px;
+}
+
+.input-field {
+  width: 80%;
+  background-color: #3B567D;
+  border: #3B567D;
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #A2B3CD;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile-dot {
+  position: absolute;
+  bottom: 1px;
+  right: 4px;
+}

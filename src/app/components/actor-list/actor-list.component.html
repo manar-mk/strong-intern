@@ -1,0 +1,31 @@
+<div class="center" *ngIf="actorsLoading">
+  <p class="info">Loading...</p>
+</div>
+<div class="center" *ngIf="!actorsLoading && actors.length === 0">
+  <p class="info">No such actors</p>
+</div>
+<div *ngIf="!actorsLoading">
+  <h4 class="actor-list-text">CAST AND CREW INFO</h4>
+  <div class="actor-cards">
+    <app-actor-card
+      *ngFor="let actor of actors | slice:0:actorsPage"
+      [actor]="actor"
+    ></app-actor-card>
+  </div>
+</div>
+<div class="show-buttons">
+  <app-medium-button
+    *ngIf="actorsPage < actors.length && actors.length > 0"
+    [text]="'Show More'"
+    [icon]="'down-vector.png'"
+    [bgColor]="'#5E47A1'"
+    (show)="actorPageHandle($event)"
+  ></app-medium-button>
+  <app-medium-button
+    *ngIf="actorsPage >= 10 && actors.length > 0"
+    [text]="'Show Less'"
+    [icon]="'up-vector.png'"
+    [bgColor]="'#E43109'"
+    (show)="actorPageHandle($event)"
+  ></app-medium-button>
+</div>

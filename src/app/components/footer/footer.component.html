@@ -1,0 +1,36 @@
+<footer class="center">
+  <div class="container center center-y">
+    <div>
+      <div class="footer-content">
+        <button class="button center-y cursor-pointer">
+          <img src="assets/icons/footer/globe%201.png" alt="globe"/>
+          <p class="button-text">English</p>
+          <img src="assets/icons/footer/Vector.png" alt="vector"/>
+        </button>
+        <div *ngFor="let footerInfo of footerInfoData | slice:0:3">
+          <a routerLink="/" class="text-decoration-none">
+            <p class="footer-info-title">{{footerInfo.title}}</p>
+          </a>
+          <a routerLink="/" class="text-decoration-none">
+            <p class="footer-info-text" *ngFor="let text of footerInfo.texts">{{text}}</p>
+          </a>
+        </div>
+        <div>
+          <a routerLink="/" class="text-decoration-none">
+            <p class="footer-info-title">{{footerInfoData[3].title}}</p>
+          </a>
+          <div class="footer-info-icons">
+            <a routerLink="/" *ngFor="let icon of footerInfoData[3].texts">
+              <img
+                class="cursor-pointer"
+                src="{{'assets/icons/footer/' + icon}}"
+                alt="{{icon}}"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-text">© 2022 Dramatic. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>

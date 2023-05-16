@@ -1,0 +1,105 @@
+.movie-cover {
+  padding-bottom: 30px;
+}
+
+.menu {
+  position: absolute;
+  background: linear-gradient(2.87deg, #130B29 9.89%, #5436A9 100%, #5E47A1 100%);
+  border-radius: 26px;
+  padding: 42px 30px 42px 60px;
+  width: 117px;
+  height: 315px;
+  left: -32px;
+  top: 125px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.movie-title {
+  padding-top: 45px;
+  padding-left: 123px;
+  color: crimson;
+  font-family: 'Montserrat', fantasy;
+  font-size: 100px;
+}
+
+.movie-text {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding-left: 132px;
+  width: 560px;
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+.movie-genres {
+  padding-left: 134px;
+  display: flex;
+  gap: 15px;
+}
+
+.movie-genre {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.red {
+  color: #FF2E00;
+}
+
+.buttons {
+  margin-top: 18px;
+  padding-left: 134px;
+  display: flex;
+  gap: 21px;
+}
+
+.movie-details {
+  margin-top: 24px;
+  padding-left: 134px;
+  display: flex;
+  gap: 17px;
+}
+
+.movie-rating {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFC907;
+}
+
+.movie-property {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding: 2px 4px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+}
+
+.movie-year {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #959595;
+}
+
+.movie-cover-container {
+  width: 1440px;
+}

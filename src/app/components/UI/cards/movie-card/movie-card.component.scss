@@ -1,0 +1,63 @@
+.card {
+  width: 168px;
+  height: 301px;
+}
+
+.movie-image {
+  width: 168px;
+  height: 237px;
+  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.36));
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.movie-name {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.truncate-long-texts {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-year {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  color: #AFAFAF;
+  margin-bottom: 5px;
+}
+
+.card-bottom {
+  display: flex;
+  gap: 76px;
+}
+
+.card-bottom-1 {
+  display: flex;
+  gap: 5px;
+}
+
+.card-bottom-2 {
+  display: flex;
+  gap: 6px;
+}
+
+.card-rating {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  color: #FFC907;
+}

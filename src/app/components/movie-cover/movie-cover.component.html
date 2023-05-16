@@ -1,0 +1,40 @@
+<div class="movie-cover center" *ngIf="movieService.movie | async; let movie">
+  <div class="movie-cover-container">
+    <div class="menu">
+      <a routerLink="/" *ngFor="let menuIcon of menuIcons">
+        <img
+          src="{{'assets/icons/movie-cover/menu/' + menuIcon}}"
+          alt="{{menuIcon}}"
+        />
+      </a>
+    </div>
+    <h2 *ngIf="logoLink === ''" class="movie-title">{{movie.title}}</h2>
+    <img *ngIf="logoLink !== ''" class="movie-title" src="{{'http://image.tmdb.org/t/p/w300' + logoLink}}" alt="{{movie.title}}"/>
+    <p class="movie-text">{{movie.overview}}</p>
+    <div>
+      <div class="movie-genres">
+        <p class="movie-genre red">GENRES</p>
+      </div>
+      <div class="movie-genres">
+        <p *ngFor="let genre of movie.genres; let i = index"
+           class="movie-genre"
+        >{{genre.name}}{{i !== movie.genres.length - 1 ? ',' : ''}}</p>
+      </div>
+    </div>
+    <div class="buttons">
+      <app-big-button
+        *ngFor="let button of buttons"
+        [text]="button.text"
+        [icon]="button.icon"
+        [bgColor]="button.bgColor"
+      ></app-big-button>
+    </div>
+    <div class="movie-details">
+      <img src="assets/icons/movie-cover/image.png" alt="IMDb"/>
+      <p class="movie-rating">{{movie.vote_average | number:'1.1-1'}}</p>
+      <p class="movie-property">U/A</p>
+      <p class="movie-property">4K</p>
+      <p class="movie-year">{{movie.release_date | date: 'yyyy'}}</p>
+    </div>
+  </div>
+</div>

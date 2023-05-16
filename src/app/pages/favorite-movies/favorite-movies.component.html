@@ -1,0 +1,12 @@
+<div class="center">
+  <div class="container">
+    <div class="content-bg">
+      <h3 class="title">MY FAVORITES</h3>
+      <app-movie-list
+        [movies]="movieService.favoriteMovies.value"
+        [pageLimit]="6"
+        [moviesLoading]="false"
+      ></app-movie-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<header class="center">
+  <div class="container">
+    <div class="header-content center-y">
+      <div class="logo-links-group center-y">
+        <a routerLink="/">
+          <img ngSrc="assets/icons/header/DRAMATIC.png" alt="DRAMATIC" height="36" width="182"/>
+        </a>
+        <ng-container *ngFor="let link of links">
+          <a *ngIf="link.regex.test(router.url)" routerLink="{{link.path}}" class="text-decoration-none">
+            <div class="active-link-div">
+              <p class="active-link">{{link.name | uppercase}}</p>
+              <div class="center center-y">
+                <div class="blue-circle"></div>
+              </div>
+            </div>
+          </a>
+          <a *ngIf="!link.regex.test(router.url)" routerLink="{{link.path}}"
+             class="link"
+          >{{link.name | uppercase}}</a>
+        </ng-container>
+      </div>
+      <div class="search-links-group center-y">
+        <div
+          class="search center center-y"
+          [ngStyle]="{'background-color': router.url !== '/' && !router.url.startsWith('/movie') ? 'crimson' : ''}"
+        >
+          <input
+            [disabled]="router.url !== '/' && !router.url.startsWith('/movie')"
+            [ngStyle]="{'background-color': router.url !== '/' && !router.url.startsWith('/movie') ? 'crimson' : ''}"
+            class="input-field"
+            placeholder="{{'search' | uppercase}}"
+            [ngModel]="userInput"
+            (ngModelChange)="inputChange($event)"
+          />
+          <img class="cursor-pointer" src="assets/icons/header/search%201.png" alt="search"/>
+        </div>
+        <a routerLink="/" *ngFor="let iconLink of iconLinks">
+          <img src="{{'assets/icons/header/' + iconLink}}" alt="{{iconLink}}"/>
+        </a>
+        <a routerLink="/">
+          <div class="profile">
+            <img src="assets/icons/header/Ellipse%201.png" alt="profile"/>
+            <img class="profile-dot" src="assets/icons/header/Ellipse%202.png" alt="."/>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
