@@ -4,7 +4,7 @@ import s from './MovieList.module.css';
 import CardHeading from './CardHeading/CardHeading';
 import { usePopularMovies } from '../../queries/use-popular-movies';
 
-const MovieList = (props) => {
+const MovieList = () => {
   const { isFetching, isFetched, data } = usePopularMovies();
 
   console.log('DATA:', data);

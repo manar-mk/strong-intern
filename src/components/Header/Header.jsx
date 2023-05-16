@@ -52,10 +52,10 @@ const Header = () => {
               <img src={gift} alt="gift" />
             </div>
             <div className={s.navbar__bell}>
-              <img src={bell} alt="gift" />
+              <img src={bell} alt="bell" />
             </div>
             <div className={s.navbar__profile}>
-              <img src={Ellipse} alt="gift" />
+              <img src={Ellipse} alt="Ellipseft" />
             </div>
           </div>
         </div>

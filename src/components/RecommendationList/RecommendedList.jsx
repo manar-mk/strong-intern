@@ -1,35 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
 import s from './RecommendedList.module.css';
 import CardHeading from '../MovieList/CardHeading/CardHeading';
-
-const APIKEY = '7ec7904afc3c747f50ebba3f8bb7b81e';
-
-const initialState = { data: null, isLoading: false, error: null };
+import { useRecommendedMovies } from '../../queries/use-recommended-movies';
 
 const RecommendedList = (props) => {
-  const [popularFilms, setPopularFilms] = useState(initialState);
+  const { isFetching, isFetched, data } = useRecommendedMovies();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setPopularFilms((state) => ({ ...state, isLoading: true }));
-      const res = await fetch(
-        `https://api.themoviedb.org/3/discover/movie/?include_adult=truе&api_key=${APIKEY}&page=2`
-      );
-      const { results } = await res.json();
-      // console.log(data);
-      setPopularFilms((state) => ({
-        ...state,
-        isLoading: false,
-        data: results,
-      }));
-      console.log(results);
-
-      // return data;
-    };
-
-    fetchData();
-  }, []);
+  console.log('DATA:', data);
 
   return (
     <div>
@@ -39,11 +17,9 @@ const RecommendedList = (props) => {
             {'RECOMMENDED FOR YOU'}
           </CardHeading>
           <div className={s.card__flex}>
-            {popularFilms.isLoading && (
-              <span className={s.loading}>Loading</span>
-            )}
-            {popularFilms.data &&
-              popularFilms.data.map((film) => (
+            {isFetching && <span className={s.loading}>Loading</span>}
+            {isFetched &&
+              data.results.map((film) => (
                 <MovieCard
                   poster_path={film.poster_path}
                   title={film.title}
