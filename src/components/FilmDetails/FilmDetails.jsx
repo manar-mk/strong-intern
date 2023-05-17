@@ -24,11 +24,12 @@ function FilmDetails({ title, description, genres, date, rating, poster }) {
         <p className={s.main__text}>{description}</p>
         <h3 className={s.genre__heading}>Genre</h3>
         <div className={s.genre__list}>
-          {genres.map((genre) => (
-            <span className={s.genre__title} key={genre.id}>
-              {genre.name},
-            </span>
-          ))}
+          {genres &&
+            genres.map((genre) => (
+              <span className={s.genre__title} key={genre.id}>
+                {genre.name},
+              </span>
+            ))}
         </div>
         <div className={s.main__button}>
           <button className={`${s.watchlist__button} ${s.watch__button}`}>
@@ -47,7 +48,7 @@ function FilmDetails({ title, description, genres, date, rating, poster }) {
         </div>
         <div className={s.watch__details}>
           <img src={imbd} alt="imbd" />
-          <div className={s.watch__rating}>{rating.toFixed(1)}</div>
+          <div className={s.watch__rating}>{rating}</div>
           <div className={s.watch__country}>U/A</div>
           <div className={s.watch__views}>4K</div>
           <div className={s.watch__year}>{new Date(date).getFullYear()}</div>
