@@ -1,0 +1,22 @@
+<form class="login-page" [formGroup]="form">
+    <p class="registration-page-title">REGISTRATION PAGE</p>
+
+    <input type="text" id="first-name" formControlName="fullName" placeholder="Full name..." required> <br>
+    <div *ngIf="form.get('fullName')!.touched && form.get('fullName')!.invalid">
+        <small *ngIf="form.get('fullName')!.errors?.['required']" class="validation">Enter full name</small>
+    </div>
+
+    <input type="email" id="email" formControlName="email" placeholder="Email..." required> <br>
+    <div *ngIf="form.get('email')!.touched && form.get('email')!.invalid">
+        <small *ngIf="form.get('email')!.errors?.['required']" class="validation">Enter email</small>
+        <small *ngIf="form.get('email')!.errors?.['email']" class="validation">Enter valid email</small>
+    </div>
+
+    <input type="password" id="password" formControlName="password" placeholder="Password..." required> <br>
+    <div *ngIf="form.get('password')!.touched && form.get('password')!.invalid">
+        <small *ngIf="form.get('password')!.errors?.['required']" class="validation">Enter password</small>
+    </div>
+
+    <button type="submit" class="register-btn" [disabled]="form.invalid" (click)="register()" [class.spinner]="loading">Register</button>
+    <button class="sign-up-btn" routerLinkActive="active"><a routerLink="/login" style="text-decoration: none; color: #FFFFFF;">Sign In</a></button>
+</form>

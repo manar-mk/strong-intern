@@ -1,0 +1,605 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur);
+
+body, html {
+    height: 100%;
+    width: 100%;
+    min-width: 750px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background: linear-gradient(90deg, #000000 17.76%, rgba(0, 0, 0, 0.687449) 41.44%, rgba(196, 196, 196, 0) 150%);
+}
+
+button{
+    cursor: pointer;
+}
+.notifications {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 12px;
+}
+
+
+// NAVBAR
+.navform {
+    position: absolute;
+    width: 100%;
+    min-width: 750px;
+    height: 93px;
+    top: 0px;
+    
+    background: linear-gradient(90.53deg, rgba(0, 0, 0, 0.75) 0.45%, rgba(102, 80, 165, 0.75) 105.51%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+.navbar {
+    list-style-type: none;
+}
+.navbar li a {
+    float: left;
+    margin-left: 2.5vw;
+
+    text-decoration: none;
+}
+.label {
+    margin-top: 26px;
+
+    font-family: 'Griffy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5vmin;
+    color: #FFC907;
+}
+.pages {
+    margin-top: 9px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+}
+.profile-img {
+    //position: absolute;
+    margin-top: 7px;
+    margin-left: 4vw;
+    background: white;
+    border-radius: 50%;
+
+    width: 35px;
+    height: 35px;
+}
+
+// FOOTER
+footer {
+    margin-top: calc(100vh - 93px);
+    width: 100%;
+    height: 389px;
+    bottom: 0;
+
+    background: #161214;
+}
+footer ul{
+    margin-top: 95px;
+    margin-left: 5vw;
+    display:block; 
+    float:left;
+}
+footer ul li{
+    padding: 5px;
+    list-style-type: none;
+
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+select {
+    position: absolute;
+    width: 131px;
+    height: 34px;
+    margin-top: 95px;
+    margin-left: 7vw;
+    padding: 5px;
+    
+    background: #362F33;
+    border: none;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+select:focus { outline: none; border: none; }
+.contacts {
+    margin-left: 195px;
+}
+.main-li {
+    margin-bottom: 10px;
+    font-weight: 700;
+    opacity: 1;
+}
+
+// MAIN PAGE
+.main-page {
+    margin-top: 100px;
+}
+.settings {
+    position: absolute;
+    width: 90px;
+    height: 270px;
+    left: -28px;
+    top: 125px;
+
+    background: linear-gradient(2.87deg, #130B29 9.89%, #5436A9 100%, #5E47A1 100%);
+    border-radius: 26px;
+}
+.container {
+    margin-left: 100px;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    
+    background: rgba(11, 15, 22, 0.47);
+    box-shadow: 8px -8px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+    border-radius: 24px;
+}
+.search-container {
+    margin-left: 55vw;
+}
+#search {
+    position: absolute;
+    width: 25vw;
+    height: 37px;
+    //margin-left: 50vw;
+    margin-top: -7px;
+
+    background: #3B567D;
+    border-radius: 18.5px;
+    border: none;
+
+    font-family:'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 15px;
+    color: #A2B3CD;
+}
+#search-btn {
+    position: absolute;
+    margin-left: 22vw;
+    margin-top: -2px;
+    background: none;
+    border: none;
+}
+#search-btn i{
+    color: white;
+}
+#search-btn i:hover{
+    font-size: 30px;
+}
+.movies-cont-name {
+    margin-left: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+// MAIN PAGE MAIN CONTAINER
+.main-container {
+    padding: 20px;
+    display: inline-block;
+}
+.img-btn {
+    background: none;
+    border: none;
+}
+.movie-img {
+    width: 168px;
+    height: 237px;
+
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.36));
+    border-radius: 7px;
+}
+.movie-title {
+    width: 167px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.movie-year {
+    margin-top: 10px;
+    width: 60px;
+    height: 11px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    color: #AFAFAF;
+}
+.movie-imdb {
+    margin-top: 5px;
+    width: 28px;
+    height: 14px;
+}
+.movie-rating {
+    margin-left: 10px;
+    width: 18px;
+    height: 11px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+
+    color: #FFC907;
+}
+.like-btn {
+    background: none;
+    border: none;
+}
+.like-btn i{
+    color: white; 
+    margin-left: 12px;
+}
+.like-btn i:hover {
+    color: pink; 
+}
+
+// LOGIN PAGE
+.login-page {
+    padding: 25px;
+    margin-top: 200px;
+    width: 350px;
+    margin-left: 35vw;
+    //margin-right: 35vw;
+
+    background: rgba(11, 15, 22, 0.47);
+    box-shadow: 8px -8px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px); 
+    border-radius: 24px;
+}
+.login-page-title {
+    padding-bottom: 20px;
+
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.warning {
+    padding-bottom: 10px;
+
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: red;
+}
+.validation {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    color: #AFAFAF;
+}
+#email {
+    margin-bottom: 10px;
+    width: 324px;
+    height: 37px;
+
+    background: #3B567D;
+    border-radius: 8.5px;
+    border: none;
+
+    font-family:'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 15px;
+}
+#password {
+    margin-bottom: 10px;
+    width: 324px;
+    height: 37px;
+
+    background: #3B567D;
+    border-radius: 8.5px;
+    border: none;
+
+    font-family:'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 15px;
+}
+.sign-in-btn {
+    margin-top: 15px;
+    width: 158px;
+    height: 50px;
+
+    background: #5436A9;
+    border-radius: 30px;
+    border: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.sign-up-btn {
+    margin-left: 25px;
+    width: 155px;
+    height: 50px;
+
+    background: #5C5C5C;
+    border-radius: 30px;
+    border: none;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+// REGISTRATION PAGE
+.registration-page-title {
+    padding-bottom: 20px;
+
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+#first-name { 
+    margin-bottom: 10px;
+    width: 324px;
+    height: 37px;
+
+    background: #3B567D;
+    border-radius: 8.5px;
+    border: none;
+
+    font-family:'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 15px;
+}
+#second-name { 
+    margin-bottom: 10px;
+    width: 324px;
+    height: 37px;
+
+    background: #3B567D;
+    border-radius: 8.5px;
+    border: none;
+
+    font-family:'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 15px;
+}
+.register-btn {
+    padding-right: 20px;
+    margin-top: 15px;
+    width: 158px;
+    height: 50px;
+    
+    background: #5436A9;
+    border-radius: 30px;
+    border: none;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+// FILM DESCRIPTION PAGE
+.film-description-page {
+    margin-top: 100px;
+}
+.description-container {
+    margin-left: 100px;
+    margin-right: 780px;
+}
+.name {
+    padding-top: 70px;
+    margin-bottom: 35px;
+ 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 100px;
+    color: #FFFFFF;
+}
+.description {
+    padding: 0;
+    margin-top: 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.description-type {
+    margin-top: 35px;
+    margin-bottom: 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FF2E00;
+}
+.watch-btn {
+    margin-top: 24px;
+    width: 158px;
+    height: 50px;
+
+    background: #5436A9;
+    border-radius: 30px;
+    border: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.add-btn {
+    margin-left: 20px;
+    width: 155px;
+    height: 50px;
+
+    background: #5C5C5C;
+    border-radius: 30px;
+    border: none;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.imdb {
+    margin-top: 24px;
+    width: 54px;
+    height: 27px;
+}
+.rating {
+    margin-left: 15px;
+    width: 18px;
+    height: 11px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFC907;
+}
+.year {
+    margin-left: 35px;
+    width: 60px;
+    height: 11px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #AFAFAF;
+}
+.trailer {
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 307px;
+    height: 180px;
+
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.36));
+    border-radius: 10px;
+}
+.info-container {
+    margin-left: 0px;
+    display: inline-block;
+}
+.actor {
+    margin-left: 20px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    width: 110px;
+    height: 145px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+}
+.actor-name {
+    margin-left: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.actor-role {
+    margin-left: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #A9A9A9;
+}
+
+
+.inline {
+    display: inline-block;
+}
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+   
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-top: -2px;
+    margin-left: 75px;
+    border-radius: 50px;
+    border: 10px solid #ffffff;
+    border-top-color: #232536;
+    animation: spinner .8s linear infinite;
+}

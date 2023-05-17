@@ -1,0 +1,40 @@
+<div class="main-page">
+    <div class="settings">
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 27px; margin-left: 40px; font-size: 35px;">&#xe7ef;</i> <br>
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 19px; margin-left: 40px; font-size: 35px;">&#xe896;</i> <br>
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 19px; margin-left: 40px; font-size: 35px;">&#xf090;</i> <br>
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 19px; margin-left: 40px; font-size: 35px;">&#xe8b8;</i> <br>
+    </div>
+
+    <div class="container">
+        <div class="search-container">
+            <input #input id="search" type="text" placeholder="SEARCH">
+            <button id="search-btn" type="submit" (click)="getSearchingFilms(input.value)" [class.spinner]="loading" [disabled]="loading">
+                <i class="material-icons">&#xe8b6;</i>
+            </button>
+        </div>
+
+        <div class="movies-cont-name">MOVIES YOU MUST WATCH</div>
+
+        <div class="main-container" *ngFor="let film of films">
+            <button class="img-btn" routerLink="/film-description" (click)="getFilm(film)"><img src="{{film.photo}}" class="movie-img"/></button>
+            <p class="movie-title">{{film.name}}</p>
+            <p class="movie-year">{{film.year}}</p>
+    
+            <span class="inline"> <img src="/assets/img/IMDb.jpg" class="movie-imdb"/> </span>
+            <span class="inline"> <p class="movie-rating">{{film.rating}}</p> </span>
+            <span class="inline">
+                <i class="material-icons" style="color: white; margin-left: 55px;">&#xe8f4;</i>
+                <button (click)="likeFilm(film)" class="like-btn">
+                    <i class="material-icons">&#xe87d;</i>
+                </button>
+            </span>
+
+            <div class="notifications">
+                <notification *ngFor="let item of service | async" [observer]="item.observer">
+                  {{item.content}}
+                </notification>
+            </div>
+        </div>
+    </div>
+</div>

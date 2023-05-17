@@ -1,0 +1,22 @@
+<form class="login-page" [formGroup]="form">
+    <p class="login-page-title">WELCOME</p>
+    <p *ngIf="failed" class="warning">
+        Wrong email or password! <br>
+        Please, create a new account 
+        if you are not registered!
+    </p>
+    
+    <input type="email" formControlName="email" id="email" placeholder="Email Address"> <br>
+    <div *ngIf="form.get('email')!.touched && form.get('email')!.invalid">
+        <small *ngIf="form.get('email')!.errors?.['required']" class="validation">Enter email</small>
+        <small *ngIf="form.get('email')!.errors?.['email']" class="validation">Enter valid email</small>
+    </div>
+
+    <input type="password" formControlName="password" id="password" placeholder="Password"> <br>
+    <div *ngIf="form.get('password')!.touched && form.get('email')!.invalid">
+        <small *ngIf="form.get('password')!.errors?.['required']" class="validation">Enter password</small>
+    </div>
+
+    <button type="submit" class="sign-in-btn" [disabled]="form.invalid || submitted" (click)="submit()" [class.spinner]="loading" [disabled]="loading">Sign In</button>
+    <button class="sign-up-btn" routerLinkActive="active"><a routerLink="/registration" style="text-decoration: none; color: #FFFFFF;"> Create Account </a></button>
+</form>
