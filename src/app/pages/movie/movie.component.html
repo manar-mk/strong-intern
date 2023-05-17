@@ -1,0 +1,43 @@
+<app-movie-cover></app-movie-cover>
+<div class="center">
+  <div class="container">
+    <div class="content-bg" *ngIf="movieService.query.value === ''">
+      <div class="trailer-actors">
+        <div class="trailer">
+          <p class="trailer-text">TRAILER</p>
+          <iframe
+            width="307px"
+            height="170px"
+            [src]="'https://www.youtube.com/embed/' + trailerLink | safe"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          ></iframe>
+        </div>
+        <app-actor-list
+          [actors]="actors"
+          [pageLimit]="5"
+          [actorsLoading]="actorsLoading"
+        ></app-actor-list>
+      </div>
+      <ng-container>
+        <h3 class="title">MORE LIKE THIS</h3>
+        <app-movie-list
+          [movies]="similarMovies"
+          [pageLimit]="6"
+          [moviesLoading]="similarMoviesLoading"
+        ></app-movie-list>
+      </ng-container>
+    </div>
+    <div class="content-bg" *ngIf="movieService.query.value !== ''">
+      <ng-container>
+        <h3 class="title">SEARCH RESULTS</h3>
+        <app-movie-list
+          [movies]="movieService.queryResults.value"
+          [pageLimit]="6"
+          [moviesLoading]="movieService.queryResultsLoading"
+        ></app-movie-list>
+      </ng-container>
+    </div>
+  </div>
+</div>

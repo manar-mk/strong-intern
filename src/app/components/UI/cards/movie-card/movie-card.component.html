@@ -1,0 +1,32 @@
+<div class="card">
+  <a [routerLink]="['/movie', movie.id]" class="text-decoration-none">
+    <div>
+      <img class="movie-image" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="{{movie.title}}"/>
+      <h4 class="movie-name truncate-long-texts">{{movie.title}}</h4>
+      <p class="movie-year">{{movie.release_date | date: 'yyyy'}}</p>
+    </div>
+  </a>
+  <div class="card-bottom">
+    <div class="card-bottom-1 center-y">
+      <img src="assets/icons/card/IMDb-small.png" alt="IMDb"/>
+      <p class="card-rating">{{movie.vote_average | number:'1.1-1'}}</p>
+    </div>
+    <div class="card-bottom-2 center-y">
+      <img src="assets/icons/card/eye.png" alt="eye"/>
+      <img
+        *ngIf="!redHeart"
+        class="cursor-pointer"
+        src="assets/icons/card/white-heart.png"
+        alt="white heart"
+        (click)="addFavorite()"
+      />
+      <img
+        *ngIf="redHeart"
+        class="cursor-pointer"
+        src="assets/icons/card/red-heart.png"
+        alt="red heart"
+        (click)="removeFavorite()"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<app-movie-cover></app-movie-cover>
+<div class="center">
+  <div class="container">
+    <div class="content-bg" *ngIf="movieService.query.value === ''">
+      <ng-container>
+        <div class="title-button-group">
+          <h3 class="title">MOVIES YOU MUST WATCH</h3>
+          <app-medium-button
+            [text]="'FILTERS'"
+            [icon]="'down-vector.png'"
+            [bgColor]="'#5C5C5C'"
+          ></app-medium-button>
+        </div>
+        <app-movie-list
+          [movies]="trendingMovies"
+          [pageLimit]="pageLimit"
+          [moviesLoading]="trendingMoviesLoading"
+        ></app-movie-list>
+      </ng-container>
+      <ng-container>
+        <div class="title-languages-group">
+          <h3 class="title">TOP RATED MOVIES</h3>
+          <div class="language-buttons">
+            <app-small-button
+              *ngFor="let buttonInfo of languageButtonsInfo"
+              [text]="buttonInfo[0]"
+              [bgColor]="buttonInfo[1]"
+            ></app-small-button>
+          </div>
+        </div>
+        <app-movie-list
+          [movies]="topRatedMovies"
+          [pageLimit]="pageLimit"
+          [moviesLoading]="topRatedMoviesLoading"
+        ></app-movie-list>
+      </ng-container>
+      <ng-container>
+        <h3 class="title">UPCOMING MOVIES</h3>
+        <app-movie-list
+          [movies]="upcomingMovies"
+          [pageLimit]="pageLimit"
+          [moviesLoading]="upcomingMoviesLoading"
+        ></app-movie-list>
+      </ng-container>
+    </div>
+    <div class="content-bg" *ngIf="movieService.query.value !== ''">
+      <ng-container>
+        <h3 class="title">SEARCH RESULTS</h3>
+        <app-movie-list
+          [movies]="movieService.queryResults.value"
+          [pageLimit]="pageLimit"
+          [moviesLoading]="movieService.queryResultsLoading"
+        ></app-movie-list>
+      </ng-container>
+    </div>
+  </div>
+</div>

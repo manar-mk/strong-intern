@@ -1,0 +1,78 @@
+footer {
+  height: 389px;
+  background-color: #161214;
+}
+
+.footer-text {
+  margin-top: 27px;
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding-left: 81px;
+  padding-right: 235px;
+}
+
+.button {
+  height: 34px;
+  background: #362F33;
+  width: 131px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.button-text {
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.footer-info-title {
+  font-family: 'Proxima Nova', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.footer-info-text {
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.footer-info-title:hover, .footer-info-text:hover {
+  color: yellow;
+}
+
+.footer-info-icons {
+  display: flex;
+  gap: 14px;
+}
