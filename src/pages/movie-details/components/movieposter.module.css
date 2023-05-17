@@ -1,0 +1,176 @@
+.image {
+  background-position: center;
+  background-size: cover;
+  max-height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.movie__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.125rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.movie__overview {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  margin-top: 32px;
+  color: #FFFFFF;
+  max-width: 700px;
+}
+
+.button__container {
+  margin-top: 18px;
+  display: flex;
+}
+
+.genre__container {
+  margin-top: 18px;
+}
+
+.genre__container_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  text-transform: uppercase;
+  color: #FF2E00;
+}
+
+.genre__container_genres {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: white;
+}
+
+.rating__container {
+  display: flex;
+  align-items: center;
+  margin-top: 23px;
+}
+
+.imdb__img {
+  margin-right: 12px;
+}
+
+.resolution__img {
+  margin-right: 12px;
+}
+
+.ua__img {
+  margin-right: 12px;
+}
+
+.imdb__rate {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: 12px;
+  color: #FFC907;
+}
+
+.movie__year {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #959595;
+}
+
+.language__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.language__container_audio {
+  display: flex;
+  flex-direction: column;
+}
+
+.language__container_audio:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.language__container_audio_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #E43109;
+}
+
+.language__container_audio_paragraph {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.actors__container {
+
+}
+
+.actors__container_title {
+  
+}
+
+@media screen and (max-width: 768px) {
+
+  .movie__title {
+    font-size: 3.5rem;
+  }
+
+  .movie__overview {
+    font-size: 1rem;
+    line-height: 1rem;
+    max-width: 400px;
+  }
+
+  .rating__container {
+    margin-bottom: 1rem;
+  }
+
+  .genre__container_title {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .genre__container_genres {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.content__container {
+  margin: 0 auto;
+  padding: 7.5% 2% 10% 2%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 767.98px) {
+  .content__container {
+    padding: 10rem 1rem;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .content__container {
+    padding: 5rem 1rem;
+  }
+}
