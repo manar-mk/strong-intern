@@ -9,8 +9,8 @@ const MovieList = lazy(() => import("./pages/movies/MovieList"));
 
 import Header from "./common/Header";
 import Loader from "./common/Loader";
+import Dashboard from "./pages/statistics";
 import "./App.css";
-import Statistics from "./pages/statistics/Statistics";
 
 function App() {
   return (
@@ -69,7 +69,7 @@ function App() {
           path="/statistics"
           element={
             <Suspense fallback={<Loader />}>
-              <Statistics />
+              <Dashboard />
             </Suspense>
           }
         />

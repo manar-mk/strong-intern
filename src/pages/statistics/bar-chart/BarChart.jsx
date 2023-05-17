@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Chart, registerables } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { requests } from "../../requests";
+import { requests } from "../../../requests";
 import s from "./statistics.module.css";
 
 Chart.register(...registerables);
 
-export default function Statistics() {
+export default function BarChart() {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState([]);
+  const [genrePercentages, setGenrePercentages] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -57,6 +58,10 @@ export default function Statistics() {
     percentage: (genre.count / totalGenres) * 100,
   }));
 
+  useEffect(() => {
+    setGenrePercentages(genrePopularity);
+  }, []);
+
   const genreMap = {};
   genres.forEach((genre) => {
     genreMap[genre.id] = genre.name;
@@ -66,9 +71,12 @@ export default function Statistics() {
     (genre) => genreMap[genre.genreId] || "Unknown"
   );
   const chartData = genrePopularity.map((genre) => genre.percentage);
-
   const chartOptions = {
     scales: {
+      x: {
+        stacked: true,
+        beginAtZero: true,
+      },
       y: {
         beginAtZero: true,
         max: 100,
@@ -92,7 +100,7 @@ export default function Statistics() {
         },
       },
     },
-    backgroundColor: 'white',
+    backgroundColor: "white",
   };
 
   const chartData1 = {
@@ -110,13 +118,22 @@ export default function Statistics() {
     <div className={s.statistics__container}>
       <div className={s.statistics__content}>
         <Bar data={chartData1} options={chartOptions} />
-        <ul>
-          {genreCounts.map((genre) => (
-            <li key={genre.genreId}>
-              {genreMap[genre.genreId] || "Unknown"} - {genre.count} movies
-            </li>
-          ))}
-        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Genre</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {genrePercentages.map((genre) => (
+              <tr key={genre.genreId}>
+                <td>{genreMap[genre.genreId] || "Unknown"}</td>
+                <td>{genre.percentage.toFixed(2)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
