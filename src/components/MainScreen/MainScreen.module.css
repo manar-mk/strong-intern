@@ -3,7 +3,9 @@
   padding-left: 123px;
   margin-bottom: 48px;
 }
-
+.main__content {
+  padding-top: 140px;
+}
 .main__text {
   font-family: 'Montserrat';
   font-style: normal;
