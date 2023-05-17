@@ -8,16 +8,16 @@
 
 1. Опубликовать веб-приложение на доступном хостинге (например, на GitHub Pages, Vercel, Netlify и т.д.).
 2. Фронтенд должен быть на Angular, Vue или React последних версий.
-3. Создать Merge Request (MR) в репозиторий https://github.com/manar-mk/strong-intern с описанием в следующем формате:
-   - Имя кандидата
-   - Список реализованных функций из задания
-   - Ссылка на опубликованный сайт
+3. Создать Merge Request (MR) в репозиторий [https://github.com/manar-mk/strong-intern](https://github.com/manar-mk/strong-intern) с описанием в следующем формате:
+   * Имя кандидата
+   * Список реализованных функций из задания
+   * Ссылка на опубликованный сайт
 
 ## Основные функции
 
-1. Поиск фильмов и сериалов по ключевым словам, жанрам или актерам.
-2. Отображение информации о фильме или сериале (название, постер, описание, рейтинг, актерский состав и т. д.).
-3. Возможность просмотра трейлеров фильмов и сериалов.
+1. ~~Поиск фильмов и сериалов по ключевым словам, жанрам или актерам.~~
+2. ~~Отображение информации о фильме или сериале (название, постер, описание, рейтинг, актерский состав и т. д.).~~
+3. ~~Возможность просмотра трейлеров фильмов и сериалов.~~
 
 ## Опциональные функции (необязательны, но будут зачтены при исполнении)
 
@@ -28,5 +28,5 @@
 
 ## Используемые ресурсы
 
-- Публичный API: The Movie Database API (https://www.themoviedb.org/documentation/api). Этот API также предоставляет ссылки на трейлеры фильмов и сериалов, которые можно встроить в ваше приложение с помощью видеоплеера, например, YouTube Player API (https://developers.google.com/youtube/iframe_api_reference).
-- Дизайн: Dramatic - Indian Movie Streaming Platform (https://www.figma.com/file/1AfSkSi0vPQIZFGwsX2RGe/Dramatic---Indian-Movie-Streaming-Platform-(Community)-(Copy)?type=design&node-id=2-2&t=9clOILWClLQKmimV-0)
+* Публичный API: The Movie Database API ([https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api)). Этот API также предоставляет ссылки на трейлеры фильмов и сериалов, которые можно встроить в ваше приложение с помощью видеоплеера, например, YouTube Player API ([https://developers.google.com/youtube/iframe_api_reference](https://developers.google.com/youtube/iframe_api_reference)).
+* Дизайн: Dramatic - Indian Movie Streaming Platform ([https://www.figma.com/file/1AfSkSi0vPQIZFGwsX2RGe/Dramatic---Indian-Movie-Streaming-Platform-(Community)-(Copy)?type=design&amp;node-id=2-2&amp;t=9clOILWClLQKmimV-0](https://www.figma.com/file/1AfSkSi0vPQIZFGwsX2RGe/Dramatic---Indian-Movie-Streaming-Platform-(Community)-(Copy)?type=design&node-id=2-2&t=9clOILWClLQKmimV-0))

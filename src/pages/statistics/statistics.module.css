@@ -1,0 +1,17 @@
+.statistics__container {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistics__content {
+  background-color: white;
+  color: black;
+  border: 20px;
+  padding: 3rem 4rem;
+  width: 500px;
+  height: 500px;
+}
