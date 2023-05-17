@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+The Project Name: Dramatic
+
+
+Full-Name: Akhmetkerey Alzhan
+
+The tasks:
+
+1) Search by movie, tv show and actors
+
+2) Watch trailers
+
+3) Details about movie and tv show
+
+4) Show popular movies
+
+
+Links:
+https://dramatic-indol.vercel.app/
+=======
 # Тех.задание стажерам:
 
 ## DRAMATIC - Веб-приложение для рекомендации фильмов и сериалов на основе популярности и пользовательских предпочтений
@@ -25,3 +45,4 @@
 ## Используемые ресурсы
 - Публичный API: The Movie Database API (https://www.themoviedb.org/documentation/api). Этот API также предоставляет ссылки на трейлеры фильмов и сериалов, которые можно встроить в ваше приложение с помощью видеоплеера, например, YouTube Player API (https://developers.google.com/youtube/iframe_api_reference).
 - Дизайн: Dramatic - Indian Movie Streaming Platform (https://www.figma.com/file/1AfSkSi0vPQIZFGwsX2RGe/Dramatic---Indian-Movie-Streaming-Platform-(Community)-(Copy)?type=design&node-id=2-2&t=9clOILWClLQKmimV-0)
+>>>>>>> upstream/main
