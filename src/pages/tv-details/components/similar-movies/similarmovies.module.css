@@ -1,0 +1,33 @@
+.similar__movies__container {
+  position: relative;
+}
+
+.similar__movies__container_img {
+  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.36));
+  border-radius: 7px;
+  width: 350px;
+  height: 210px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent; 
+  cursor: pointer;
+  position: relative; 
+}
+
+.similar__movies__container_img:hover {
+  filter: brightness(60%) blur(1px); 
+  border: 1px solid white;
+  text-shadow: none;
+}
+
+.similar__movies__container_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+

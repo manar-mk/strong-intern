@@ -1,0 +1,30 @@
+.actor__card {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.actor__image {
+  border: 1px solid #FFFFFF;
+  border-radius: 9px;
+}
+
+.actor__details {
+  margin-top: 1rem;
+}
+
+.actor__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+.actor__department {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #A9A9A9;
+}
