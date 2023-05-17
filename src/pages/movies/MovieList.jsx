@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { requests } from "../../requests";
 import ContentList from "../../common/List/ContentList";
-import search_icon from "../../assets/icons/search.svg";
+import search_icon from "../../../public/search.svg";
 import s from "../../common/styles/header.module.css";
 
 const PAGE_SIZE = 15;

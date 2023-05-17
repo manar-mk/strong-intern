@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import s from "./styles/header.module.css";
-import logo from "../assets/DRAMATIC-logo.svg";
-import search_icon from "../assets/icons/search.svg";
-import gift__icon from "../assets/icons/gift.svg";
-import bell__icon from "../assets/icons/bell.svg";
-import person__icon from "../assets/icons/user.svg";
+import logo from "../../public/DRAMATIC-logo.svg";
+import search_icon from "../../public/search.svg";
+import gift__icon from "../../public/gift.svg";
+import bell__icon from "../../public/bell.svg";
+import person__icon from "../../public/user.svg";
 
 export default function Header() {
   const [hoveredItem, setHoveredItem] = useState(null);

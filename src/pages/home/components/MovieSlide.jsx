@@ -1,6 +1,6 @@
 import Button from "./ui/Button";
-import triangle from "../../../assets/icons/triangle.svg";
-import plus from "../../../assets/icons/plus.svg";
+import triangle from "../../../../public/triangle.svg";
+import plus from "../../../../public/plus.svg";
 import { grayButton, purpleButton } from "../../../styles";
 import s from "./mainposter.module.css";
 

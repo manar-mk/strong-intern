@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../home/components/ui/Button";
-import triangle from "../../../assets/icons/triangle.svg";
-import plus from "../../../assets/icons/plus.svg";
+import triangle from "../../../../public/triangle.svg";
+import plus from "../../../../public/plus.svg";
 import { grayButton, purpleButton } from "../../../styles";
 import PlayerModal from "../../../common/PlayerModal";
 import s from "./tvposter.module.css";
