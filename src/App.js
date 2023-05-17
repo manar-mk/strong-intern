@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Main from './pages/main';
-import MovieDetails from './pages/MovieDetails';
+import MovieDetails from './pages/MovieDetailsPage';
 import SearchPage from './pages/Search';
 
 const queryClient = new QueryClient();
