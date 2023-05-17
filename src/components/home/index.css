@@ -1,0 +1,137 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+
+
+    background-color: #000000;
+
+}
+
+
+.btn__watch{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 13px 25px;
+    margin-right: 25px;
+
+    color: #FFFFFF;
+
+    background: #5436A9;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+i{
+    padding-left: 25px;
+}
+
+.btn__mylist{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 13px 25px;
+
+    color: #FFFFFF;
+
+    background: #5C5C5C;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.home__poster{
+    padding-left: 123px;
+    height: 100vh;
+
+    color: #fff;
+    background-position: 0 0 ;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.home__title{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    padding-top: 195px;
+
+    color: #FFC907;
+}
+
+.home__overview{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    width: 560px;
+
+    color: #FFFFFF;
+}
+
+.home__genre{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    padding: 12px 0 18px;
+    color: #FF2E00;
+}
+
+.home__genre span {
+    color: #fff;
+}
+
+
+.home__items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+
+    padding: 24px 0 44px;
+}
+
+.home__format{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 2px 4px;
+
+    color: #FFFFFF;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.home__release{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #959595;
+}
+
+.home__vote{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFC907;
+}
