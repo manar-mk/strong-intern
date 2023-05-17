@@ -1,4 +1,4 @@
-import PieChart from "./stacked-barchart/PieChart";
+import PieChart from "./pie-chart/PieChart";
 import BarChart from "./bar-chart/BarChart";
 
 export default function Dashboard() {

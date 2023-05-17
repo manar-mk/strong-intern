@@ -13,64 +13,60 @@ export default function BarChart() {
   const [genrePercentages, setGenrePercentages] = useState([]);
 
   useEffect(() => {
-    const fetchMovies = async () => {
-      const totalPages = 20;
-      const promises = [];
+    const fetchData = async () => {
+      const [moviesResponse, genresResponse] = await Promise.all([
+        axios.get(`${requests.topRatedForStatistics}?page=1`),
+        axios.get(`${requests.genreMovies}`),
+      ]);
 
-      for (let page = 1; page <= totalPages; page++) {
-        promises.push(
-          axios.get(`${requests.topRatedForStatistics}?page=${page}`)
-        );
-      }
+      const movies = moviesResponse.data.results;
+      const genres = genresResponse.data.genres;
 
-      const responses = await Promise.all(promises);
-      const movies = responses.flatMap((response) => response.data.results);
       setMovies(movies);
+      setGenres(genres);
     };
 
-    const fetchGenres = async () => {
-      const response = await axios.get(`${requests.genreMovies}`);
-      setGenres(response.data.genres);
-    };
-
-    fetchMovies();
-    fetchGenres();
+    fetchData();
   }, []);
-
-  const genresData = movies.flatMap((movie) => movie.genre_ids);
-
-  const genreCountMap = genresData.reduce((acc, genre) => {
-    acc[genre] = (acc[genre] || 0) + 1;
-    return acc;
-  }, {});
-
-  const genreCounts = Object.entries(genreCountMap).map(([genreId, count]) => ({
-    genreId: Number(genreId),
-    count,
-  }));
-
-  genreCounts.sort((a, b) => b.count - a.count);
-
-  const totalGenres = genreCounts.reduce((sum, genre) => sum + genre.count, 0);
-
-  const genrePopularity = genreCounts.map((genre) => ({
-    ...genre,
-    percentage: (genre.count / totalGenres) * 100,
-  }));
 
   useEffect(() => {
+    if (movies.length === 0 || genres.length === 0) {
+      return;
+    }
+
+    const genresData = movies.flatMap((movie) => movie.genre_ids);
+    const genreCountMap = {};
+
+    for (let genreId of genresData) {
+      genreCountMap[genreId] = (genreCountMap[genreId] || 0) + 1;
+    }
+
+    const genreCounts = Object.entries(genreCountMap).map(([genreId, count]) => ({
+      genreId: Number(genreId),
+      count,
+    }));
+
+    genreCounts.sort((a, b) => b.count - a.count);
+
+    const totalGenres = genreCounts.reduce((sum, genre) => sum + genre.count, 0);
+
+    const genrePopularity = genreCounts.map((genre) => ({
+      ...genre,
+      percentage: (genre.count / totalGenres) * 100,
+    }));
+
     setGenrePercentages(genrePopularity);
-  }, []);
+  }, [movies, genres]);
 
   const genreMap = {};
   genres.forEach((genre) => {
     genreMap[genre.id] = genre.name;
   });
 
-  const chartLabels = genrePopularity.map(
+  const chartLabels = genrePercentages.map(
     (genre) => genreMap[genre.genreId] || "Unknown"
   );
-  const chartData = genrePopularity.map((genre) => genre.percentage);
+  const chartData = genrePercentages.map((genre) => genre.percentage);
   const chartOptions = {
     scales: {
       x: {
@@ -79,6 +75,8 @@ export default function BarChart() {
       },
       y: {
         beginAtZero: true,
+        stepSize: 25,
+        min: 0,
         max: 100,
         ticks: {
           callback: (value) => `${value}%`,
@@ -100,6 +98,10 @@ export default function BarChart() {
         },
       },
     },
+    barThickness: 20,
+    height: 400,
+    borderRadius: 4,
+    barPercentage: 0.5,
     backgroundColor: "white",
   };
 
@@ -107,7 +109,7 @@ export default function BarChart() {
     labels: chartLabels,
     datasets: [
       {
-        label: "Popularity Percentage",
+        label: "Popularity Percentage %",
         data: chartData,
         backgroundColor: "rgba(54, 162, 235, 0.6)",
       },
@@ -128,7 +130,10 @@ export default function BarChart() {
           <tbody>
             {genrePercentages.map((genre) => (
               <tr key={genre.genreId}>
-                <td>{genreMap[genre.genreId] || "Unknown"}</td>
+                <div style={{ marginRight: "5rem", display: "flex", justifyContent: "flex-start"}}>
+                  <td>{genreMap[genre.genreId] || "Unknown"}</td>
+                </div>
+
                 <td>{genre.percentage.toFixed(2)}%</td>
               </tr>
             ))}

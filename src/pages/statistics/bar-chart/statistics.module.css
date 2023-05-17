@@ -1,12 +1,13 @@
 .statistics__container {
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  margin-right: 100px;
 }
 
 .statistics__content {
-  background-color: white;
+  background-color: floralwhite;
   color: black;
   border-radius: 10px;
   padding: 3rem 4rem;
