@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import s from './Header.module.css';
 import logo from '../../assets/header/DRAMATIC.png';
 import search from '../../assets/header/search.svg';
@@ -15,24 +16,24 @@ const Header = () => {
           </div>
           <ul className={s.navbar__menu}>
             <li class={s.navbar__item}>
-              <a href="/" class="navbar__link">
+              <Link to="/" class="navbar__link">
                 HOME
-              </a>
+              </Link>
             </li>
             <li class={s.navbar__item}>
-              <a href="/tv-show" class="navbar__link">
+              <Link to="/tv-show" class="navbar__link">
                 TV SHOW
-              </a>
+              </Link>
             </li>
             <li class={s.navbar__item}>
-              <a href="/movies" class="navbar__link">
+              <Link to="/movies" class="navbar__link">
                 MOVIES
-              </a>
+              </Link>
             </li>
             <li class={s.navbar__item}>
-              <a href="/new" class="navbar__link">
+              <Link to="/new" class="navbar__link">
                 NEW
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -41,7 +42,7 @@ const Header = () => {
             <input
               className={s.input__search}
               type="text"
-              placeholder="SERCH"
+              placeholder="SEARCH"
             ></input>
             <button>
               <img src={search} alt="search" />
@@ -55,7 +56,7 @@ const Header = () => {
               <img src={bell} alt="bell" />
             </div>
             <div className={s.navbar__profile}>
-              <img src={Ellipse} alt="Ellipseft" />
+              <img src={Ellipse} alt="Ellipse" />
             </div>
           </div>
         </div>

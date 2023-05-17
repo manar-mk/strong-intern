@@ -8,8 +8,8 @@ export const useDetails = (id) => {
       const resp = await fetch(
         `${config.baseURL}movie/${id}?api_key=${config.API_KEY}`
       );
-
-      return resp.json();
+	  const data = await resp.json();
+      return data;
     },
   });
 };

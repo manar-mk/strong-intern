@@ -5,7 +5,9 @@
   gap: 13px;
   padding: 8px 16px;
   background: #362f33;
+  max-height: 34px;
 }
+
 .select__language {
   font-family: 'Roboto';
   font-style: normal;

@@ -7,9 +7,11 @@ import RecommendedList from '../components/RecommendationList/RecommendedList';
 const Main = () => {
   return (
     <Layout>
-      <MainScreen />
-      <MovieList />
-      <RecommendedList/>
+      <div className="indus">
+        <MainScreen />
+        <MovieList />
+      </div>
+      <RecommendedList />
     </Layout>
   );
 };

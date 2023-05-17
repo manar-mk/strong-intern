@@ -6,10 +6,12 @@
   color: inherit;
   font-family: 'Montserrat', sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
   height: 100%;
 }
+
 body {
   height: 100%;
   background-color: #000000;
@@ -19,6 +21,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+
 button {
   font: inherit;
 }
@@ -26,6 +29,7 @@ button {
 p {
   font-size: 0.875rem;
 }
+
 ul {
   list-style: none;
 }
@@ -34,6 +38,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 button {
   border: none;
   background-color: transparent;
@@ -43,6 +48,7 @@ button {
   line-height: inherit;
   color: inherit;
 }
+
 input,
 textarea,
 select {
@@ -54,13 +60,18 @@ select {
   outline: none;
   background-color: transparent;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 .content {
   flex: 1 0 auto;
+}
+
+.indus {
   background: linear-gradient(
       90deg,
       #000000 17.76%,
@@ -68,5 +79,6 @@ select {
       rgba(196, 196, 196, 0) 100%
     ),
     url('../assets/watch/bg-watch.png');
-  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }

@@ -8,7 +8,6 @@ const RecommendedList = (props) => {
   const { isFetching, isFetched, data } = useRecommendedMovies();
 
   console.log('DATA:', data);
-
   return (
     <div>
       <div className={s.cards__wrapper}>
@@ -21,6 +20,7 @@ const RecommendedList = (props) => {
             {isFetched &&
               data.results.map((film) => (
                 <MovieCard
+                  id={film.id}
                   poster_path={film.poster_path}
                   title={film.title}
                   vote_average={film.vote_average}

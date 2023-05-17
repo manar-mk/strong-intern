@@ -1,6 +1,9 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Main from './pages/main';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+import Main from './pages/main';
+import MovieDetails from './pages/MovieDetails';
+import SearchPage from './pages/Search';
 
 const queryClient = new QueryClient();
 
@@ -8,12 +11,14 @@ const router = createBrowserRouter([
   {
     path: '/',
     Component: Main,
-    children: [
-      {
-        path: 'movie/:movieId',
-        Component: Main,
-      },
-    ],
+  },
+  {
+    path: '/movie/:movieId',
+    Component: MovieDetails,
+  },
+  {
+    path: '/search',
+    Component: SearchPage,
   },
 ]);
 

@@ -3,6 +3,7 @@ import s from './MovieCard.module.css';
 import eyeIcon from '../../assets/movie-card/eye.svg';
 import likeIcon from '../../assets/movie-card/like.svg';
 import imbdIcon from '../../assets/movie-card/imdb.png';
+import { Link } from 'react-router-dom';
 // adult: false;
 // backdrop_path: '/aAgGrfBwna1nO4M2USxwFgK5O0t.jpg';
 // genre_ids: (3)[(27, 53, 14)];
@@ -17,36 +18,38 @@ import imbdIcon from '../../assets/movie-card/imdb.png';
 // video: false;
 // vote_average: 7.2;
 // vote_count: 902;
-const MovieCard = ({ title, vote_average, release_date, poster_path }) => {
+const MovieCard = ({ id, title, vote_average, release_date, poster_path }) => {
   // console.log(title);
   return (
-    <div className={s.card}>
-      <div className={s.card__image}>
-        <img
-          className={s.card__img}
-          src={'https://image.tmdb.org/t/p/original' + poster_path}
-          alt="film"
-        />
-      </div>
-      <h4 className={s.card__title}>{title}</h4>
-      <div className={s.card__year}>{release_date}</div>
-      <div className={s.card__details}>
-        <div className={s.details__left}>
-          <div className={s.card__imbd}>
-            <img className={s.image__imbd} src={imbdIcon} alt="imbd" />
-          </div>
-          <div className={s.card__rating}>{vote_average}</div>
+    <Link to={`/movie/${id}`}>
+      <div className={s.card}>
+        <div className={s.card__image}>
+          <img
+            className={s.card__img}
+            src={'https://image.tmdb.org/t/p/original' + poster_path}
+            alt="film"
+          />
         </div>
-        <div className={s.details__right}>
-          <div className={s.card__eye}>
-            <img src={eyeIcon} alt="eye" />
+        <h4 className={s.card__title}>{title}</h4>
+        <div className={s.card__year}>{release_date}</div>
+        <div className={s.card__details}>
+          <div className={s.details__left}>
+            <div className={s.card__imbd}>
+              <img className={s.image__imbd} src={imbdIcon} alt="imbd" />
+            </div>
+            <div className={s.card__rating}>{vote_average}</div>
           </div>
-          <div className={s.card__like}>
-            <img src={likeIcon} alt="like" />
+          <div className={s.details__right}>
+            <div className={s.card__eye}>
+              <img src={eyeIcon} alt="eye" />
+            </div>
+            <div className={s.card__like}>
+              <img src={likeIcon} alt="like" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

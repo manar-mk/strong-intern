@@ -3,3 +3,41 @@
   padding: 95px 235px 41px 82px;
   flex: 0 0 auto;
 }
+
+/* .btn__social {
+  border: 1px solid #ffffff;
+  border-radius: 19.5px;
+  padding: 12px 16px;
+} */
+
+.footer__navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 110px;
+}
+
+.footer__links {
+  display: flex;
+  gap: 14px;
+}
+.navigation__text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+
+.footer__lists {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
