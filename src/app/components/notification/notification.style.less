@@ -1,0 +1,36 @@
+@keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  
+  :host {
+    position: relative;
+    padding: 5px 50px 12px 16px;
+    margin: 4px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    background: red;
+    pointer-events: all;
+    transform-origin: top right;
+    animation: pop 0.3s;
+  }
+  
+  .close {
+    position: absolute;
+    padding: 0 2px;
+    background: none;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    right: 10px;
+    outline: none;
+  
+    &:focus-visible {
+      box-shadow: 0 0 2px white;
+    }
+  }
+  
